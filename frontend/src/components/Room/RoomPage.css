@@ -1,0 +1,33 @@
+/* ── Room Page Layout ──────────────────────────────────── */
+
+.room-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.room-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.room-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0; /* prevent flex overflow */
+}
+
+.room-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border-primary);
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}

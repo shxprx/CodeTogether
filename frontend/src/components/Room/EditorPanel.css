@@ -1,0 +1,12 @@
+/* ── Editor Panel ──────────────────────────────────────── */
+
+.editor-panel {
+  flex: 1;
+  min-height: 0; /* allow flex shrink for overflow */
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.editor-panel .monaco-editor {
+  /* Override Monaco's default bg to match our theme */
+  border-radius: 0;
+}

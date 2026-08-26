@@ -1,0 +1,94 @@
+/* ── Output Panel ──────────────────────────────────────── */
+
+.output-panel {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  flex-shrink: 0;
+  background: var(--bg-secondary);
+}
+
+.output-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.output-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.output-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.output-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.output-content {
+  flex: 1;
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.output-content.compiling {
+  color: var(--warning);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.output-content.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.output-stdin {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border-primary);
+}
+
+.stdin-label {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-primary);
+  background: var(--bg-tertiary);
+}
+
+.stdin-textarea {
+  flex: 1;
+  padding: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.stdin-textarea::placeholder {
+  color: var(--text-muted);
+}

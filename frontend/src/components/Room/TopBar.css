@@ -1,0 +1,60 @@
+/* ── Top Bar ───────────────────────────────────────────── */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0;
+  min-height: 52px;
+}
+
+.topbar-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.topbar-room-id {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 4px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.topbar-room-id:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.topbar-room-id .copy-icon {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.topbar-room-id.copied {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}

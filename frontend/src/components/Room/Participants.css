@@ -1,0 +1,57 @@
+/* ── Participants ──────────────────────────────────────── */
+
+.participants {
+  flex: 1;
+  padding: var(--space-md);
+  overflow-y: auto;
+}
+
+.participants-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.participants-count {
+  color: var(--accent-primary);
+  margin-left: var(--space-xs);
+}
+
+.participants-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.participant-item:hover {
+  background: var(--bg-hover);
+}
+
+.participant-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+}
+
+.participant-name {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
